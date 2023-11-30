@@ -4,7 +4,7 @@
 if BOARD_DAO_LEFT
 
 	config ZMK_KEYBOARD_NAME
-	default "Dao"
+	default "Zireael"
 
     config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default y
