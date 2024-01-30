@@ -13,13 +13,9 @@
 #define RSE 2
 #define ADJ 3
 
-&lt {
-    quick_tap_ms = <200>;
-};
+&lt { quick_tap_ms = <200>; };
 
-&mt {
-    quick_tap_ms = <200>;
-};
+&mt { quick_tap_ms = <200>; };
 
 / {
     chosen {
@@ -35,7 +31,7 @@
 
         default_layer {
             bindings = <
-&mt LGUI RBKT    &kp Q  &kp W  &kp E        &kp R            &kp T        &kp Y        &kp U           &kp I        &kp O    &kp P     &kp LBKT
+&mt LGUI RBKT    &kp Q  &kp W  &kp E        &kp R            &kp T        &kp Y        &kp U           &kp I        &kp O    &kp P     &mt RGUI LBKT
 &mt LCTRL GRAVE  &kp A  &kp S  &kp D        &kp F            &kp G        &kp H        &kp J           &kp K        &kp L    &kp SEMI  &mt RCTRL SQT
 &mt LALT MINUS   &kp Z  &kp X  &kp C        &kp V            &kp B        &kp N        &kp M           &kp COMMA    &kp DOT  &kp FSLH  &mt RALT BSLH
                                &lt RSE TAB  &mt LSHFT SPACE  &lt LWR RET  &lt LWR ESC  &mt RSHFT BSPC  &lt RSE DEL
@@ -44,10 +40,10 @@
 
         lower_layer {
             bindings = <
-&mt LGUI F1     &kp F2    &kp F3  &kp F4       &kp F5             &kp F6     &kp F7     &kp F8    &kp F9       &kp F10   &kp F11   &kp F12
-&mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH     &kp DOUBLE_QUOTES  &kp PRCNT  &kp CARET  &kp AMPS  &kp STAR     &kp LPAR  &kp RPAR  &mt RCTRL MINUS
-&mt LALT EQUAL  &kp N1    &kp N2  &kp N3       &kp N4             &kp N5     &kp N6     &kp N7    &kp N8       &kp N9    &kp N0    &mt RIGHT_ALT KP_EQUAL
-                                  &lt ADJ TAB  &trans             &trans     &trans     &trans    &lt ADJ DEL
+&mt LGUI F1     &kp F2    &kp F3  &kp F4       &kp F5      &kp F6     &kp F7     &kp F8    &kp F9       &kp F10   &kp F11   &kp F12
+&mt LCTRL PLUS  &kp EXCL  &kp AT  &kp HASH     &kp DOLLAR  &kp PRCNT  &kp CARET  &kp AMPS  &kp STAR     &kp LPAR  &kp RPAR  &mt RCTRL MINUS
+&mt LALT EQUAL  &kp N1    &kp N2  &kp N3       &kp N4      &kp N5     &kp N6     &kp N7    &kp N8       &kp N9    &kp N0    &mt RIGHT_ALT EQUAL
+                                  &lt ADJ TAB  &trans      &trans     &trans     &trans    &lt ADJ DEL
             >;
         };
 
@@ -55,7 +51,7 @@
             bindings = <
 &mt LGUI KP_NUM  &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS  &kp C_VOL_UP  &kp HOME                &kp PAGE_DOWN           &kp PG_UP             &kp END                  &kp CLCK
 &mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &kp C_MUTE    &kp LEFT                &kp DOWN_ARROW          &kp UP_ARROW          &kp RIGHT_ARROW          &mt RCTRL PAUSE_BREAK
-&kp LALT         &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT    &kp C_VOL_DN  &kp LC(LS(LEFT_ARROW))  &kp LC(LS(DOWN_ARROW))  &kp LC(LS(UP_ARROW))  &kp LC(LS(RIGHT_ARROW))  &mt RIGHT_ALT PRINTSCREEN
+&trans           &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT    &kp C_VOL_DN  &kp LC(LS(LEFT_ARROW))  &kp LC(LS(DOWN_ARROW))  &kp LC(LS(UP_ARROW))  &kp LC(LS(RIGHT_ARROW))  &mt RIGHT_ALT PRINTSCREEN
                                              &trans     &trans     &lt ADJ RET   &lt ADJ ESC   &trans                  &trans
             >;
         };
