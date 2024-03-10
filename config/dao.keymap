@@ -26,6 +26,56 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        L_br {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <18 19>;
+        };
+
+        R_br {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <22 21>;
+        };
+
+        Eq {
+            bindings = <&kp EQUAL>;
+            key-positions = <30 31>;
+        };
+
+        L_sq_br {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <6 7>;
+        };
+
+        R_sq_br {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <10 9>;
+        };
+
+        F_four {
+            bindings = <&kp F4>;
+            key-positions = <10 11>;
+        };
+    };
+
+    behaviors {
+        Td_sm: Td_sm {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_SM";
+            #binding-cells = <0>;
+            bindings = <&kp K_MUTE>, <&kp LC(LS(A))>;
+        };
+
+        Td_dots: Td_dots {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_DOTS";
+            #binding-cells = <0>;
+            bindings = <&kp KP_DOT>, <&kp SEMICOLON>, <&kp LS(SEMI)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -49,10 +99,10 @@
 
         raise_layer {
             bindings = <
-&mt LGUI KP_NUM  &kp KP_SLASH     &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_MINUS  &kp C_VOL_UP  &kp HOME                &kp PAGE_DOWN           &kp PG_UP             &kp END                  &kp CLCK
-&mt LCTRL EQUAL  &kp KP_MULTIPLY  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_PLUS   &kp C_MUTE    &kp LEFT                &kp DOWN_ARROW          &kp UP_ARROW          &kp RIGHT_ARROW          &mt RCTRL PAUSE_BREAK
-&trans           &kp KP_N0        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_DOT    &kp C_VOL_DN  &kp LC(LS(LEFT_ARROW))  &kp LC(LS(DOWN_ARROW))  &kp LC(LS(UP_ARROW))  &kp LC(LS(RIGHT_ARROW))  &mt RIGHT_ALT PRINTSCREEN
-                                             &trans     &trans     &lt ADJ RET   &lt ADJ ESC   &trans                  &trans
+&kp CAPSLOCK              &kp HOME          &kp PAGE_DOWN           &kp PAGE_UP           &kp END            &kp C_VOLUME_UP    &kp KP_MINUS  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_SLASH     &mt RIGHT_GUI KP_NUM
+&mt LCTRL PAUSE_BREAK     &kp LEFT          &kp DOWN                &kp UP_ARROW          &kp RIGHT          &Td_sm             &kp KP_PLUS   &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MULTIPLY  &mt RCTRL EQUAL
+&mt LEFT_ALT PRINTSCREEN  &kp LC(LS(LEFT))  &kp LC(LS(DOWN_ARROW))  &kp LC(LS(UP_ARROW))  &kp LC(LS(RIGHT))  &kp C_VOLUME_DOWN  &Td_dots      &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_N0        &trans
+                                                                    &trans                &trans             &lt ADJ RET        &lt ADJ ESC   &trans     &trans
             >;
         };
 
