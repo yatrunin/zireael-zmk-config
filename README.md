@@ -20,7 +20,7 @@ This layout is heavily inspired by [this](https://github.com/aroum/Watchman-layo
 
 ### How to change the keymap?
 
-1. Fork the repository https://github.com/yumagulovrn/dao-zmk-config
+1. Fork the repository https://github.com/Mposiblee/zireael-zmk-config
 2. Make changes to the [dao.keymap](../config/boards/arm/dao/dao.keymap) file in your repository OR use wonderful https://nickcoutsos.github.io/keymap-editor/
 3. Commit changes to your repository
 4. Go to `Actions` tab in your repository
