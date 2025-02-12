@@ -31,37 +31,60 @@
 
         L_br {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <18 19>;
+            key-positions = <19 20>;
+            layers = <2>;
         };
 
         R_br {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <22 21>;
+            layers = <2>;
         };
 
         Eq {
             bindings = <&kp EQUAL>;
             key-positions = <30 31>;
+            layers = <2>;
         };
 
         L_sq_br {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <6 7>;
+            key-positions = <7 8>;
+            layers = <2>;
         };
 
         R_sq_br {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <10 9>;
+            layers = <2>;
         };
 
         F_four {
             bindings = <&kp F4>;
             key-positions = <10 11>;
+            layers = <2>;
         };
 
         esc {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
+        };
+
+        t_2 {
+            bindings = <&tog 2>;
+            key-positions = <36 41>;
+        };
+
+        l_fig_br {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <31 32>;
+            layers = <2>;
+        };
+
+        r_fig_br {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <33 34>;
+            layers = <2>;
         };
     };
 
@@ -106,7 +129,7 @@
             bindings = <
 &kp CAPSLOCK              &kp HOME          &kp PAGE_DOWN           &kp PAGE_UP           &kp END            &kp C_VOLUME_UP    &kp KP_MINUS  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_SLASH     &mt RIGHT_GUI KP_NUM
 &mt LCTRL PAUSE_BREAK     &kp LEFT          &kp DOWN                &kp UP_ARROW          &kp RIGHT          &Td_sm             &kp KP_PLUS   &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MULTIPLY  &mt RCTRL EQUAL
-&mt LEFT_ALT PRINTSCREEN  &kp LC(LS(LEFT))  &kp LC(LS(DOWN_ARROW))  &kp LC(LS(UP_ARROW))  &kp LC(LS(RIGHT))  &kp C_VOLUME_DOWN  &Td_dots      &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_N0        &trans
+&mt LEFT_ALT PRINTSCREEN  &kp LC(LS(LEFT))  &kp LC(LS(DOWN_ARROW))  &kp LC(LS(UP_ARROW))  &kp LC(LS(RIGHT))  &kp C_VOLUME_DOWN  &kp KP_N0     &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_N0        &trans
                                                                     &trans                &trans             &lt ADJ RET        &lt ADJ ESC   &trans     &trans
             >;
         };
